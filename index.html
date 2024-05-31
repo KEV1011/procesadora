@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="./style.css"
+    />
+    <title>KJ S.A.S - Frutas y Hortalizas Frescas</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="title">KJ S.A.S</h1>
+
+      <nav>
+        <ul>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+          <li>
+            <a href="#carrito">Carrito (<span id="cart-count">0</span>)</a>
+          </li>
+          <li><a href="#login">Iniciar Sesión</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <h2 class="title">Bienvenidos a KJ S.A.S</h2>
+
+      <p style="text-align: center">
+        Creado por Kevin Sanchez, un desarrollador apasionado por la web. Con
+        habilidades avanzadas y una gran personalidad, Kevin garantiza una
+        experiencia de compra en línea excepcional.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="title">Nuestros Productos</h2>
+      <div id="productos">
+        <div class="product">
+          <img
+            src="./images/fresa.jpg"
+            alt="Fresa"
+            width="600"
+            height="400"
+          />
+          <p>Fresa - $3500</p>
+          <button onclick="addToCart('Fresa', 3500)">Añadir al carrito</button>
+        </div>
+
+        <div class="product">
+          <img
+            src="images/durazno.jpg"
+            alt="Durazno"
+            width="500"
+            height="400"
+          />
+          <p>Durazno - $3500</p>
+          <button onclick="addToCart('Durazno', 3500)">
+            Añadir al carrito
+          </button>
+        </div>
+
+        <div class="product">
+          <img
+            src="images/lechuga.jpg"
+            alt="Lechuga"
+            width="500"
+            height="400"
+          />
+          <p>Lechuga - $3500</p>
+          <button onclick="addToCart('Lechuga', 3500)">
+            Añadir al carrito
+          </button>
+        </div>
+
+        <div class="product">
+          <img
+            src="images/cebolla.jpg"
+            alt="Cebolla"
+            width="500"
+            height="400"
+          />
+          <p>Cebolla - $3500</p>
+          <button onclick="addToCart('Cebolla', 3500)">
+            Añadir al carrito
+          </button>
+        </div>
+
+        <div class="product">
+          <img
+            src="images/brocoli.jpg"
+            alt="Brocoli"
+            width="500"
+            height="400"
+          />
+          <p>Brocoli - $3500</p>
+          <button onclick="addToCart('Brocoli', 3500)">
+            Añadir al carrito
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="carrito">
+      <h2 class="title">Carrito de Compras</h2>
+
+      <div id="cart-items"></div>
+      <p>Total: $<span id="cart-total">0</span></p>
+      <button onclick="checkout()">Pagar</button>
+    </section>
+
+    <section id="login">
+      <h2 class="title">Iniciar Sesión / Registrarse</h2>
+
+      <div>
+        <input
+          type="text"
+          id="username"
+          placeholder="Usuario"
+        />
+        <input
+          type="password"
+          id="password"
+          placeholder="Contraseña"
+        />
+        <button onclick="login()">Iniciar Sesión</button>
+        <button onclick="register()">Registrarse</button>
+      </div>
+    </section>
+
+    <section id="reseñas">
+      <h2 class="title">Reseñas</h2>
+
+      <div class="review">
+        <p>
+          “Excelentes productos y atención al cliente. Muy recomendados!” -
+          Cliente Satisfecho
+        </p>
+      </div>
+      <div class="review">
+        <p>
+          “La mejor calidad en frutas y hortalizas frescas. Volveré a comprar.”
+          - Cliente Feliz
+        </p>
+      </div>
+    </section>
+
+    <section id="reseñas">
+      <h2>Reseñas</h2>
+
+      <div id="review-list">
+        <div class="review">
+          <p>
+            “Excelentes productos y atención al cliente. Muy recomendados!” -
+            Cliente Satisfecho
+          </p>
+        </div>
+
+        <div class="review">
+          <p>
+            “La mejor calidad en frutas y hortalizas frescas. Volveré a
+            comprar.” - Cliente Feliz
+          </p>
+        </div>
+      </div>
+
+      <div id="add-review">
+        <h3 class="title">Agregar Reseña</h3>
+        <textarea
+          id="review-text"
+          placeholder="Escribe tu reseña aquí..."
+        ></textarea>
+        <button onclick="addReview()">Enviar Reseña</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 KJ S.A.S. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
